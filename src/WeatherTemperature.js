@@ -1,4 +1,3 @@
-import matchers from "@testing-library/jest-dom/matchers";
 import React, { useState } from "react";
 
 export default function WeatherTemperature(props) {
