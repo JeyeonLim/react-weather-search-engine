@@ -25,6 +25,7 @@
 .Weather .unit {
   position: relative;
   top: -30px;
+  color: grey;
 }
 
 .weatherTemperature {
