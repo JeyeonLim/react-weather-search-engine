@@ -15,14 +15,20 @@
   padding-bottom: 20px;
 }
 .Weather img {
-  float: left;
+  position: relative;
+  top: -23px;
 }
 .Weather .temperature {
   font-size: 64px;
   position: relative;
-  top: -16px;
 }
 .Weather .unit {
   position: relative;
-  top: -48px;
+  top: -30px;
+}
+
+.weatherTemperature {
+  position: relative;
+  left: 95px;
+  top: -120px;
 }
