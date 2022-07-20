@@ -14,10 +14,7 @@
 .Weather form {
   padding-bottom: 20px;
 }
-.Weather img {
-  position: relative;
-  top: -23px;
-}
+
 .Weather .temperature {
   font-size: 64px;
   position: relative;
@@ -27,8 +24,13 @@
   top: -30px;
 }
 
+.Weather canvas {
+  position: relative;
+  top: -5px;
+}
+
 .weatherTemperature {
   position: relative;
-  left: 95px;
-  top: -120px;
+  left: 70px;
+  top: -90px;
 }
