@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import WeatherForecast from "./WeatherForecast";
 import WeatherInfo from "./WeatherInfo";
 import "./Weather.css";
 
@@ -12,6 +12,7 @@ export default function Weather(props) {
     setWeatherdata({
       ready: true,
       city: response.data.name,
+      coordinates: response.data.coord,
       temperature: Math.round(response.data.main.temp),
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
@@ -56,23 +57,14 @@ export default function Weather(props) {
                 />
               </div>
             </div>
+            <WeatherInfo data={weatherdata} />
+            <WeatherForecast coordinates={weatherdata.coordinates} />
           </form>
-          <WeatherInfo data={weatherdata} />
         </div>
-        <footer>
-          This projected is coded by Jeyeon Lim and{" "}
-          <a
-            href="https://github.com/JeyeonLim/react-weather-search-engine "
-            target="_blank"
-            rel="noreferrer"
-          >
-            open-sourced by Github
-          </a>
-        </footer>
       </div>
     );
   } else {
     citySearch();
-    return "Loading";
+    return "Loading...";
   }
 }
